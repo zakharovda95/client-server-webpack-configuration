@@ -13,7 +13,8 @@
   "author": "@zakharovda95 <zakharovda95@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
+    "dev:front": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
+    "dev:server": "nodemon ./src/server/server.js",
     "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "devDependencies": {
@@ -29,6 +30,7 @@
     "eslint-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.5",
+    "nodemon": "^2.0.22",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "postcss": "^8.4.21",
     "postcss-loader": "^7.2.4",
@@ -42,6 +44,8 @@
     "webpack-dev-server": "^4.13.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
   }
 }

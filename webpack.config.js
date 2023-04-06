@@ -34,7 +34,7 @@ module.exports = {
 
   devServer: {
     hot: isDev,
-    port: isDev ? '4200' : '4201',
+    port: isDev ? '4200' : '4300',
     static: {
       directory: path.resolve(__dirname, 'dist'),
     },
