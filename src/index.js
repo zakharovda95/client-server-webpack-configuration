@@ -1,9 +1,8 @@
 import './index.scss';
+import router from './router/router';
 
-import { h } from './helpers/methods/h.method.js';
+// import { h } from './helpers/methods/h.method.js';
 
-const app = document.querySelector('#app');
+router.addUriListener();
 
-const elem = h(`<div class="text-[2rem]">Hello World</div>`);
-
-app.append(elem);
+// const app = document.querySelector('#app');
