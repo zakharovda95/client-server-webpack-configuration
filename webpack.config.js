@@ -20,6 +20,13 @@ module.exports = {
   output: {
     filename: isDev ? '[name].js' : '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: './dist/',
+  },
+
+  target: 'web',
+
+  resolve: {
+    extensions: ['.js'],
   },
 
   optimization: {
