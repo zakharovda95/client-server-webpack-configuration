@@ -1,8 +1,17 @@
 import './index.scss';
-import router from './router/router';
-
-// import { h } from './helpers/methods/h.method.js';
+import { MainPage } from './pages/main.js';
+import router from './router/router.js';
 
 router.addUriListener();
+class Main {
+  constructor() {
+    this.container = document.querySelector('#app');
+    this.mainPage = new MainPage();
+  }
+  bootstrap() {
+    this.container.append(this.mainPage.MainPage);
+  }
+}
 
-// const app = document.querySelector('#app');
+const main = new Main();
+main.bootstrap();

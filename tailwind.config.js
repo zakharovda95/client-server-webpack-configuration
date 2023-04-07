@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {},
+    fontFamily: {
+      'puppy': ['Puppy', 'sans-serif'],
+    },
   },
   variants: {
     extend: {},
