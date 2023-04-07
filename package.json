@@ -13,7 +13,7 @@
   "author": "@zakharovda95 <zakharovda95@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "dev:front": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
+    "dev:front": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --config webpack.config.js",
     "dev:server": "nodemon src/server/server.js",
     "build:front": "cross-env NODE_ENV=production webpack --mode production --config webpack.config.js",
     "build:server": "cross-env NODE_ENV=production webpack --mode production --config webpack.server.config.js",

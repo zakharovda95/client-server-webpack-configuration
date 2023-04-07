@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const ESLintWebpackPlugin = require('eslint-webpack-plugin');
 
-const isDev = process.env.NODE_ENV === 'production';
+const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
   output: {
     filename: isDev ? '[name].js' : '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: './dist/',
+    publicPath: isDev ? '/' : '/dist/',
   },
 
   target: 'web',
@@ -50,7 +50,6 @@ module.exports = {
 
   plugins: [
     new HTMLWebpackPlugin({
-      title: 'WebSocket Messenger',
       template: './index.html',
       minify: {
         collapseWhitespace: isProd,
