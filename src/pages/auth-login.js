@@ -1,13 +1,11 @@
 import { h } from '../helpers/methods/h.method';
-export class MainPage {
+export class AuthLoginPage {
   get Page() {
     return h(`
             <div class="w-full h-[100vh] bg-cyan-500">
                 <div class="w-full h-[80px] flex justify-between items-center px-5">
                     <div class="max-w-[300px]">
-                        <a href="/">
-                            <h1 class="text-white text-[1.8rem] text-center">Messenger</h1>
-                        </a>
+                        <h1 class="color-white text-[1.8rem] text-center font-puppy" style="font-family: Puppy, sans-serif">Messenger</h1>
                     </div>
                     <div class="flex gap-5 justify-around items-center">
                         <a href="/auth/login">Sign In</a>
@@ -16,11 +14,11 @@ export class MainPage {
                     </div>
                 </div>
                 
-                <div class="flex w-full h-[calc(100vh-80px)] gap-5 justify-center items-center">
-                     <div class="flex flex-col justify-center items-center text-center">
-                        <h1 class="2xl:text-[18rem] xl:text-[16rem] lg:text-[12rem] md:text-[9rem] text-[5rem] text-white">Messenger</h1>
-                        <p class="text-[1.5rem]">Simple chat for everyone!</p>
-                     </div>
+                <div>
+                    <form action="">
+                        <input type="text" placeholder="Емайл">
+                        <input type="password" placeholder="Пароль">
+                    </form>
                 </div>
             </div>
         `);

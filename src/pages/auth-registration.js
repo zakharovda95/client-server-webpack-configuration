@@ -1,8 +1,8 @@
 import { h } from '../helpers/methods/h.method';
-export class MainPage {
+export class AuthRegistrationPage {
   get Page() {
     return h(`
-            <div class="w-full h-[100vh] bg-cyan-500">
+            <div class="w-full h-[100vh] bg-cyan-500 flex flex-col items-center">
                 <div class="w-full h-[80px] flex justify-between items-center px-5">
                     <div class="max-w-[300px]">
                         <a href="/">
@@ -16,11 +16,14 @@ export class MainPage {
                     </div>
                 </div>
                 
-                <div class="flex w-full h-[calc(100vh-80px)] gap-5 justify-center items-center">
-                     <div class="flex flex-col justify-center items-center text-center">
-                        <h1 class="2xl:text-[18rem] xl:text-[16rem] lg:text-[12rem] md:text-[9rem] text-[5rem] text-white">Messenger</h1>
-                        <p class="text-[1.5rem]">Simple chat for everyone!</p>
-                     </div>
+                <div class="max-w-[380px]">
+                    <form action="" class="flex flex-col gap-10">
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Фамилия">
+                        <input type="text" placeholder="Емайл">
+                        <input type="password" placeholder="Пароль">
+                        <input type="password" placeholder="Подтверждение пароля">
+                    </form>
                 </div>
             </div>
         `);

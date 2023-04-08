@@ -1,17 +1,36 @@
 import './index.scss';
-import { MainPage } from './pages/main.js';
-import router from './router/router.js';
+import { MainPage } from './pages/main';
+import { AuthRegistrationPage } from './pages/auth-registration';
+import { AuthLoginPage } from './pages/auth-login';
+import { MessengerPage } from './pages/messenger';
 
-router.addUriListener();
 class Main {
   constructor() {
     this.container = document.querySelector('#app');
+    this.loaction = window.location.pathname;
+
     this.mainPage = new MainPage();
+    this.authRegistrationPage = new AuthRegistrationPage();
+    this.authLoginPage = new AuthLoginPage();
+    this.messengerPage = new MessengerPage();
   }
+
   bootstrap() {
-    this.container.append(this.mainPage.MainPage);
+    switch (this.loaction) {
+      case '/':
+        this.container.append(this.mainPage.Page);
+        break;
+      case '/auth/registration':
+        this.container.append(this.authRegistrationPage.Page);
+        break;
+      case '/auth/login':
+        this.container.append(this.authLoginPage.Page);
+        break;
+      case '/messenger':
+        this.container.append(this.messengerPage.Page);
+        break;
+    }
   }
 }
 
-const main = new Main();
-main.bootstrap();
+new Main().bootstrap();
