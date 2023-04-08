@@ -20,6 +20,9 @@ export class MainPage {
                      <div class="flex flex-col justify-center items-center text-center">
                         <h1 class="2xl:text-[18rem] xl:text-[16rem] lg:text-[12rem] md:text-[9rem] text-[5rem] text-white">Messenger</h1>
                         <p class="text-[1.5rem]">Simple chat for everyone!</p>
+                        <a href="/messenger">
+                            <button class="h-[50px] bg-cyan-800 rounded-3xl text-white mt-10 w-[280px] h-[50px]">Get Started</button> 
+                        </a>
                      </div>
                 </div>
             </div>

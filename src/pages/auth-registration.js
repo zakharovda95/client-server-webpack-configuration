@@ -16,13 +16,19 @@ export class AuthRegistrationPage {
                     </div>
                 </div>
                 
-                <div class="max-w-[380px]">
-                    <form action="" class="flex flex-col gap-10">
-                        <input type="text" placeholder="Имя">
-                        <input type="text" placeholder="Фамилия">
-                        <input type="text" placeholder="Емайл">
-                        <input type="password" placeholder="Пароль">
-                        <input type="password" placeholder="Подтверждение пароля">
+                <div>
+                
+                </div>
+                
+                <div class="max-w-[380px] h-[calc(100vh-80px)] flex flex-col justify-center items-center w-[90%] p-[5%]">
+                    <h3 class="mb-5 text-[1.3rem]">Регистрация</h3>
+                    <form action="" class="flex flex-col gap-10 w-full">
+                        <input class="h-[50px] p-5 rounded outline-0" type="text" placeholder="Имя">
+                        <input type="text" class="h-[50px] p-5 rounded outline-0" placeholder="Фамилия">
+                        <input type="text" class="h-[50px] p-5 rounded outline-0" placeholder="Емайл">
+                        <input type="password" class="h-[50px] p-5 rounded outline-0" placeholder="Пароль">
+                        <input type="password" class="h-[50px] p-5 rounded outline-0" placeholder="Подтверждение пароля">
+                        <button class="h-[50px] bg-cyan-800 rounded-3xl text-white">Зарегистрироваться</button>
                     </form>
                 </div>
             </div>
